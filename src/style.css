@@ -1,0 +1,81 @@
+.show {
+  opacity: 1;
+  transition: all 2s ease-in;
+}
+
+.hide {
+  opacity: 0;
+  transition: all 2s ease-in;
+}
+
+.cssShow {
+  /* animation的最后一个参数填写forwards 它能够在动画结束之后保存最后一帧css的样式 */
+  animation: show-item 2s ease-in forwards; 
+}
+
+@keyframes show-item {
+  0% {
+    opacity: 0;
+    color: red;
+  }
+  50% {
+    opacity: 0.5;
+    color: blue;
+  }
+  100% {
+    opacity: 1;
+    color:purple;
+  }
+}
+
+.cssHide {
+  /* animation的最后一个参数填写forwards它能够在动画结束之后保存最后一帧css的样式 */
+  animation: hide-item 2s ease-in forwards; 
+}
+
+@keyframes hide-item {
+  0% {
+    opacity: 1;
+    color: red;
+  }
+  50% {
+    opacity: 0.5;
+    color: blue;
+  }
+  100% {
+    opacity: 0;
+    color: purple;
+  }
+}
+
+
+
+.my-css-enter,
+.my-css-appear {
+  opacity: 0;
+}
+
+.my-css-enter-active,
+.my-css-appear-active {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+.my-css-enter-done {
+  opacity: 1;
+  /* color: red; */
+}
+
+
+.my-css-exit {
+  opacity:1;
+}
+
+.my-css-exit-active {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.my-css-exit-done {
+  opacity: 0;
+}
